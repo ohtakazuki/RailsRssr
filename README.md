@@ -1,24 +1,34 @@
-# README
+# フィードリーダー on Ruby on Rails 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+これは、Ruby on Rails の勉強用に作成したフィードリーダーです。
 
-Things you may want to cover:
+## ライセンス
 
-* Ruby version
+ソースコードはMITライセンスのもとで公開されています。
 
-* System dependencies
+## 使い方
 
-* Configuration
+このアプリケーションを動かす場合は、まずはリポジトリを手元にクローンしてください。
+その後、次のコマンドで必要になる RubyGems をインストールします。
 
-* Database creation
+```
+$ bundle install --without production
+```
 
-* Database initialization
+その後、データベースへのマイグレーションを実行します。
 
-* How to run the test suite
+```
+$ rails db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+最後に、テストを実行してうまく動いているかどうか確認してください。
 
-* Deployment instructions
+```
+$ rails test
+```
 
-* ...
+テストが無事に通ったら、Railsサーバーを立ち上げる準備が整っているはずです。
+
+```
+$ rails server
+```

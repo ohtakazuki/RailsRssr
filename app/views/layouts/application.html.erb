@@ -10,7 +10,9 @@
     <header>
       <nav>
         <% if user_signed_in? %>
-          <string><%= link_to current_user.username, show_path %></string>
+          <%= link_to 'ホーム', root_path %>
+          <%= link_to 'サイト一覧', sites_path %>
+          <string><%= link_to current_user.username, '#' %></string>
           <%= link_to 'プロフィール変更', edit_user_registration_path %>
           <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
         <% else %>
@@ -19,9 +21,8 @@
         <% end %>
       </nav>
     </header>
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <p id="notice" class="notice"><%= notice %></p>
+    <p id="alert" class="alert"><%= alert %></p>
 
     <%= yield %>
   </body>

@@ -10,7 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170914012359) do
+ActiveRecord::Schema.define(version: 20170914022822) do
+
+  create_table "contents", force: :cascade do |t|
+    t.integer  "site_id"
+    t.string   "author"
+    t.string   "title"
+    t.string   "url"
+    t.datetime "postdt"
+    t.boolean  "favorite"
+    t.boolean  "read"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["site_id"], name: "index_contents_on_site_id"
+  end
+
+  create_table "sites", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.string   "url"
+    t.integer  "max_count"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_sites_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
