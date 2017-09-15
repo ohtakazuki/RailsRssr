@@ -11,7 +11,7 @@
       <nav>
         <% if user_signed_in? %>
           <%= link_to 'ホーム', root_path %>
-          <%= link_to 'サイト一覧', sites_path %>
+          <%= link_to 'サイト編集', sites_path %>
           <string><%= link_to current_user.username, '#' %></string>
           <%= link_to 'プロフィール変更', edit_user_registration_path %>
           <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>

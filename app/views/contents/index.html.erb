@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <% @sites.each do |site| %>
+        <%= link_to({controller: :contents, action: :index, id: site.id}) do %>
+          <div class="panel-body">
+            <%= site.name %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="col-md-9">
+      <table class="table table-hover table-striped">
+        <tbody>
+        <% @contents.each do |content| %>
+          <%= link_to(content[:url]) do %>
+            <tr data-url="<%=content[:url] %>">
+              <td class="author">
+                <%= link_to content[:author], content[:url], target: '_blank' %>
+              </td>
+              <td class="title">
+                <%= link_to content[:title], content[:url], target: '_blank' %>
+              </td>
+              <td class="postdt">
+                <%= link_to content[:postdt], content[:url], target: '_blank' %>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

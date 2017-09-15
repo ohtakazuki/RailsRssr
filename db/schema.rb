@@ -18,10 +18,10 @@ ActiveRecord::Schema.define(version: 20170914022822) do
     t.string   "title"
     t.string   "url"
     t.datetime "postdt"
-    t.boolean  "favorite"
-    t.boolean  "read"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "favorite",   default: false
+    t.boolean  "read",       default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.index ["site_id"], name: "index_contents_on_site_id"
   end
 

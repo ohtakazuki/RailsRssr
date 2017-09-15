@@ -1,17 +1,23 @@
-<p>
-  <strong>Name:</strong>
-  <%= @site.name %>
-</p>
-
-<p>
-  <strong>Url:</strong>
-  <%= @site.url %>
-</p>
-
-<p>
-  <strong>Max count:</strong>
-  <%= @site.max_count %>
-</p>
-
-<%= link_to 'Edit', edit_site_path(@site) %> |
-<%= link_to 'Back', sites_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <p>
+        <strong>Name:</strong>
+        <%= @site.name %>
+      </p>
+      
+      <p>
+        <strong>Url:</strong>
+        <%= @site.url %>
+      </p>
+      
+      <p>
+        <strong>Max count:</strong>
+        <%= @site.max_count %>
+      </p>
+      
+      <%= link_to 'Edit', edit_site_path(@site) %> |
+      <%= link_to 'Back', sites_path %>
+    </div>
+  </div>
+</div>
