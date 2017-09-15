@@ -52,5 +52,7 @@ Please sign up first.
 Next, register the site. For example, enter the following values.
 
 name : GIGAZINE
+
 url : http://feed.rssad.jp/rss/gigazine/rss_2.0
+
 Max count : 入力不要(No input required)
